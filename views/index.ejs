@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Dashboard</title>
+    <style>
+        .indent{padding-left: 25px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>  
+</head>
+<body>
+    <a href='/new/cats'>List another cat!</a>
+    <h4>Here are your cats:</h4>
+    <% for(var i = 0; i < cat.length; i++) { %>
+        <p>Name: <a href='/cats/<%= cat[i]._id %>'><%= cat[i].name %> </a></p>
+        <p class='indent'>Age: - <%= cat[i].age %> </p>
+        <p class='indent'>Breed: - <%= cat[i].breed %> </p>
+        <p class='indent'>Personality: - <%= cat[i].personality %> </p>
+    <%}%>
+</body>
+</html>

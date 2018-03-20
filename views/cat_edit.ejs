@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Cat</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+    <h3>Fix your cat:</h3>
+    <form action='/cats/edit/<%= cat._id %>' method='POST'>
+        Cat Name: <input type='text' value='<%= cat.name %>' name='name'>
+        Cat Age: <input type='text' value='<%= cat.age %>' name='age'>
+        Cat Breed: <input type='text' value='<%= cat.breed %>' name='breed'>
+        Describe The Cat's Personality: <input type='textarea' value='<%= cat.personality %>' name='personality'>
+        <input type='submit' value='Update Cat'>
+    </form>
+</body>
+</html>
